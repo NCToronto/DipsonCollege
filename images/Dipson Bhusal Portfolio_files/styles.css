@@ -1,0 +1,361 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f4f4f9; /* Light background for contrast */
+}
+
+/* Section Styling */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px; /* More padding for breathing space */
+    box-sizing: border-box;
+}
+
+/* Profile Card Styling */
+#home {
+    background-color: #1e1e2f; /* Darker background for a professional touch */
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #2c2c3e; /* Slightly different dark tone for the card */
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+.profile-name {
+    color: #00bfa6; /* Professional green color */
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+/* Profile Details Styling */
+.profile-details {
+    color: #ffffff; /* White color for better readability */
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 5px solid #00bfa6; /* Lighter professional green */
+    margin-bottom: 20px;
+}
+
+.profile-card:hover {
+    transform: scale(1.1); /* Slight scaling on hover */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5); /* Enhanced shadow effect */
+}
+
+/* Email Button Styling */
+.email-button {
+    background-color: #00bfa6;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.email-button:hover {
+    background-color: #00a58b;
+    transform: translateY(-5px);
+}
+
+/* About Section Styling */
+.about-section {
+    background-color: #2c2c3e;
+    color: white;
+    padding: 60px 20px;
+    position: relative;
+    z-index: 1;
+    text-align: center; /* Centers text within the section */
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.about-section h2 {
+    color: #00bfa6;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    position: relative;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.content-box {
+    background-color: #3a3a4d;
+    border-radius: 15px;
+    padding: 40px;
+    width: 45%;
+    margin: 10px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-box:hover {
+    transform: translateY(-10px); /* Enhanced hover lift effect */
+    box-shadow: 0 30px 45px rgba(0, 0, 0, 0.4);
+    background-color: #4a4a6a; /* Subtle color change on hover */
+}
+
+/* About Section Headings and Text */
+.about-section h3 {
+    color: #00bfa6;
+    margin-bottom: 20px;
+}
+
+.about-section p,
+.about-section ul {
+    color: #ddd;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.about-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-section li {
+    margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+    .content-box {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Projects Section Styling */
+#projects {
+    background-color: #f4f4f9;
+    position: relative;
+    padding: 80px 20px;
+}
+
+#projects h2 {
+    color: #00bfa6;
+    font-size: 2.5em;
+    position: absolute; /* Position the title absolutely */
+    top: 20px; /* Adjust the vertical position */
+    left: 50%; /* Start positioning from the middle */
+    transform: translateX(-50%); /* Center the title horizontally */
+    z-index: 2; /* Ensure it stays on top of the image */
+    margin-bottom: 0;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+}
+
+.project-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.project-link {
+    background-color: #00bfa6;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #00a58b;
+    transform: translateY(-5px);
+}
+
+/* Certifications Section Styling */
+/* Certifications Section Styling */
+.certifications-section {
+    background-color: #1e1e2f;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content */
+}
+
+/* Heading Styling */
+.certifications-section h2 {
+    color: #00bfa6;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-left: 40px;
+    font-size: 2.5em;
+}
+
+/* Certification Card Styling */
+.certification-card {
+    background-color: #2c2c3e;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Certification Card Hover Effect */
+.certification-card:hover {
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    background-color: #3a3a4d; /* Slight background color change */
+}
+
+/* Certification Image Styling */
+.certification-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out; /* Smooth transition for transform and filter */
+}
+
+/* Certification Image Hover Effect */
+.certification-card:hover .certification-image {
+    transform: scale(1.05); /* Slight zoom effect on image */
+    filter: brightness(0.8); /* Dim the image slightly on hover */
+}
+
+/* Certification Content Styling */
+.certification-content {
+    position: absolute;
+    bottom: -100%; /* Initially hidden below */
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker overlay for better contrast */
+    color: #ddd;
+    transition: bottom 0.4s ease-in-out, opacity 0.4s ease-in-out; /* Smooth slide-up and fade-in effect */
+    opacity: 0; /* Initially hidden */
+}
+
+/* Certification Card Hover Text Effect */
+.certification-card:hover .certification-content {
+    bottom: 0; /* Slide up the content */
+    opacity: 1; /* Fade in the content */
+}
+
+
+/* Footer Section Styling */
+.footer-section {
+    background-color: #2c2c3e;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-section h2 {
+    color: #00bfa6;
+}
+
+.social-icons a {
+    color: #00bfa6;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+footer p {
+    margin-top: 20px;
+    color: #bbb;
+}

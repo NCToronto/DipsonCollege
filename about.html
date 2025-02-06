@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ College Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"> <img src="images/Logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+<h1>About Us</h1>
+
+    </section>
+<!--------ABOUT US CONTENT------>
+<section class="about-us">
+
+    <div class="row">
+        <div class="about-col">
+            <h1>Leading the Way in Canadian Higher Education</h1>
+            <p>At XYZ College, we pride ourselves on being a cornerstone of academic excellence in Canada. Our institution is recognized for its innovative approach to education, offering students a rich and diverse learning environment. 
+                <br>We are committed to nurturing the next generation of leaders, thinkers, and innovators, providing them with the tools and support they need to succeed in a rapidly changing world.</p>
+                <a href="index.html" class="visit-btn red-btn">EXPLORE NOW</a>
+        </div>
+        <div class="about-col">
+            <img src="images/about.jpg">
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-----------Footer------------>
+<section class="footer">
+    <h4>About Us</h4>
+    <p>XYZ College is dedicated to fostering academic excellence and innovation.
+         We provide a dynamic learning environment where students are encouraged to explore <br>their passions, develop critical thinking skills, and make meaningful contributions to society.
+          Join us and be part of a legacy of excellence.</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+</section>
+
+    <!----JavaScript for Toggle Menu-->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {  
+        navLinks.style.right ="0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+    
+</body>
+</html>
